@@ -43,6 +43,7 @@ class PoliceTableViewCell: UITableViewCell {
         telLabel.text = "0923112300"
         websiteLabel.frame = CGRect(x: contentView.frame.width / 6.5 + 20, y: self.telLabel.frame.height + self.districtLabel.frame.height + self.nameLabel.frame.height + self.addressLabel.frame.height + self.telLabel.frame.height + 5, width: self.contentView.frame.width / 5, height: self.contentView.frame.height / 5)
         websiteLabel.text = "oipwehfld"
+    
         self.contentView.addSubview(imgView)
         self.contentView.addSubview(districtLabel)
         self.contentView.addSubview(nameLabel)
