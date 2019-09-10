@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="NewTaipeiCityInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="21"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9Yq-Jx-gGe">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Al-NA-Ggk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fcd-qg-Qpk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfX-2j-Q90">
+                                <rect key="frame" x="216" y="444" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WPu-VY-ZC0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4NC-2x-KXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="713"/>
+        </scene>
+        <!--Buying House View Controller-->
+        <scene sceneID="Q0K-lK-MaR">
+            <objects>
+                <viewController storyboardIdentifier="BuyingHouseViewController" id="muL-Ax-4Si" customClass="BuyingHouseViewController" customModule="NewTaipeiCityInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fcz-Lk-w1O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xc0-dD-OM9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="v3u-di-7or">
+                                    <size key="itemSize" width="310" height="70"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="25" minY="20" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BuyingHouseCollectionViewCell" id="MnD-qf-mX6" customClass="BuyingHouseCollectionViewCell" customModule="NewTaipeiCityInfo" customModuleProvider="target">
+                                        <rect key="frame" x="64.5" y="20" width="310" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-1V-APo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="70"/>
+                                                    <color key="backgroundColor" red="0.4859957077" green="1" blue="0.46333911750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="qWB-1V-APo" firstAttribute="leading" secondItem="MnD-qf-mX6" secondAttribute="leading" id="qBj-dw-3lU"/>
+                                            <constraint firstAttribute="bottom" secondItem="qWB-1V-APo" secondAttribute="bottom" id="x0c-Wg-BcX"/>
+                                            <constraint firstAttribute="trailing" secondItem="qWB-1V-APo" secondAttribute="trailing" id="y3f-0r-VHp"/>
+                                            <constraint firstItem="qWB-1V-APo" firstAttribute="top" secondItem="MnD-qf-mX6" secondAttribute="top" id="zdE-W8-pFh"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="collectionViewCellView" destination="qWB-1V-APo" id="11Z-Of-ZMo"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="muL-Ax-4Si" id="bPH-wU-C5m"/>
+                                    <outlet property="delegate" destination="muL-Ax-4Si" id="K2q-ln-diE"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xc0-dD-OM9" firstAttribute="top" secondItem="jg4-Dz-QoG" secondAttribute="top" id="6RJ-fE-tbv"/>
+                            <constraint firstItem="xc0-dD-OM9" firstAttribute="leading" secondItem="jg4-Dz-QoG" secondAttribute="leading" id="PaO-EQ-7Pw"/>
+                            <constraint firstItem="jg4-Dz-QoG" firstAttribute="bottom" secondItem="xc0-dD-OM9" secondAttribute="bottom" id="UfR-zR-vcg"/>
+                            <constraint firstItem="jg4-Dz-QoG" firstAttribute="trailing" secondItem="xc0-dD-OM9" secondAttribute="trailing" id="j0q-nb-FQL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jg4-Dz-QoG"/>
+                    </view>
+                    <connections>
+                        <outlet property="BHCollectionView" destination="xc0-dD-OM9" id="RMd-ah-Bmn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YWp-Hf-Nzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="713"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="M1p-uY-e98">
+            <objects>
+                <viewController storyboardIdentifier="InfoViewController" id="RVm-8s-scw" customClass="InfoViewController" customModule="NewTaipeiCityInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6di-8D-CNm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bKP-un-yFh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InfoTableViewCell" rowHeight="90" id="3HH-EO-bEM" customClass="InfoTableViewCell" customModule="NewTaipeiCityInfo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3HH-EO-bEM" id="wgS-WK-OgP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3j-Qd-8nx">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="o8R-Nm-mY4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bKP-un-yFh" firstAttribute="leading" secondItem="jGx-sB-VZn" secondAttribute="leading" id="2WZ-HK-r1B"/>
+                            <constraint firstItem="jGx-sB-VZn" firstAttribute="bottom" secondItem="v3j-Qd-8nx" secondAttribute="bottom" id="85R-QE-xFS"/>
+                            <constraint firstItem="v3j-Qd-8nx" firstAttribute="top" secondItem="bKP-un-yFh" secondAttribute="bottom" id="C90-9P-CJb"/>
+                            <constraint firstItem="v3j-Qd-8nx" firstAttribute="centerX" secondItem="6di-8D-CNm" secondAttribute="centerX" id="L2u-Cy-fA2"/>
+                            <constraint firstItem="jGx-sB-VZn" firstAttribute="trailing" secondItem="v3j-Qd-8nx" secondAttribute="trailing" id="XdO-H0-Qxa"/>
+                            <constraint firstItem="v3j-Qd-8nx" firstAttribute="leading" secondItem="jGx-sB-VZn" secondAttribute="leading" id="dvv-yj-rDh"/>
+                            <constraint firstItem="bKP-un-yFh" firstAttribute="trailing" secondItem="jGx-sB-VZn" secondAttribute="trailing" id="mWT-fQ-iKQ"/>
+                            <constraint firstItem="bKP-un-yFh" firstAttribute="top" secondItem="jGx-sB-VZn" secondAttribute="top" id="tGR-rl-eic"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jGx-sB-VZn"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoTableView" destination="bKP-un-yFh" id="bO3-RZ-GnV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xdi-R2-Vkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866.66666666666674" y="20.758928571428569"/>
+        </scene>
+        <!--Police View Controller-->
+        <scene sceneID="Pj6-tf-QWD">
+            <objects>
+                <viewController storyboardIdentifier="policeViewController" id="ZAF-vT-vj0" customClass="policeViewController" customModule="NewTaipeiCityInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="usp-RA-NPQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RRP-Ls-Pgg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PoliceTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PoliceTableViewCell" rowHeight="90" id="j8J-0t-edr" customClass="PoliceTableViewCell" customModule="NewTaipeiCityInfo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j8J-0t-edr" id="Jm9-d4-FdR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZAF-vT-vj0" id="IBj-YW-NGF"/>
+                                    <outlet property="delegate" destination="ZAF-vT-vj0" id="p4s-b6-t9t"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1S-Hh-KOe">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CZb-iM-JU4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z1S-Hh-KOe" firstAttribute="leading" secondItem="bNP-bv-Vnh" secondAttribute="leading" id="CEx-qU-BdL"/>
+                            <constraint firstItem="RRP-Ls-Pgg" firstAttribute="top" secondItem="bNP-bv-Vnh" secondAttribute="top" id="Niz-uA-nkp"/>
+                            <constraint firstItem="z1S-Hh-KOe" firstAttribute="bottom" secondItem="bNP-bv-Vnh" secondAttribute="bottom" id="YqC-7X-J3z"/>
+                            <constraint firstItem="RRP-Ls-Pgg" firstAttribute="trailing" secondItem="bNP-bv-Vnh" secondAttribute="trailing" id="bt3-Vr-Xcj"/>
+                            <constraint firstItem="RRP-Ls-Pgg" firstAttribute="leading" secondItem="bNP-bv-Vnh" secondAttribute="leading" id="he1-ER-Sgq"/>
+                            <constraint firstItem="z1S-Hh-KOe" firstAttribute="top" secondItem="RRP-Ls-Pgg" secondAttribute="bottom" id="p1U-4v-ItM"/>
+                            <constraint firstItem="bNP-bv-Vnh" firstAttribute="trailing" secondItem="z1S-Hh-KOe" secondAttribute="trailing" id="tIn-3S-G2N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bNP-bv-Vnh"/>
+                    </view>
+                    <connections>
+                        <outlet property="policeTableView" destination="RRP-Ls-Pgg" id="HKo-f3-zpc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="avj-NI-V5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671.0144927536232" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+</document>

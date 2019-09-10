@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BD4369B8EB6CC3B4370105D /* Pods_NewTaipeiCityInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893C444153F2DA96351E1765 /* Pods_NewTaipeiCityInfo.framework */; };
+		B510AE7E2326390E00B45D00 /* PoliceDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510AE7D2326390E00B45D00 /* PoliceDataModel.swift */; };
+		B510AE8023263BD000B45D00 /* policeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510AE7F23263BD000B45D00 /* policeViewController.swift */; };
+		B510AE82232647AB00B45D00 /* PoliceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510AE81232647AB00B45D00 /* PoliceTableViewCell.swift */; };
+		B52A1D1F229064F100FA8EE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D1E229064F100FA8EE8 /* AppDelegate.swift */; };
+		B52A1D21229064F100FA8EE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D20229064F100FA8EE8 /* HomeViewController.swift */; };
+		B52A1D24229064F100FA8EE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52A1D22229064F100FA8EE8 /* Main.storyboard */; };
+		B52A1D27229064F100FA8EE8 /* NewTaipeiCityInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D25229064F100FA8EE8 /* NewTaipeiCityInfo.xcdatamodeld */; };
+		B52A1D29229064F300FA8EE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52A1D28229064F300FA8EE8 /* Assets.xcassets */; };
+		B52A1D2C229064F300FA8EE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52A1D2A229064F300FA8EE8 /* LaunchScreen.storyboard */; };
+		B52A1D4522906A6B00FA8EE8 /* TYPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D3422906A6A00FA8EE8 /* TYPagerController.m */; };
+		B52A1D4622906A6B00FA8EE8 /* TYPagerViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D3522906A6A00FA8EE8 /* TYPagerViewLayout.m */; };
+		B52A1D4722906A6B00FA8EE8 /* TYTabPagerBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D3722906A6A00FA8EE8 /* TYTabPagerBar.m */; };
+		B52A1D4822906A6B00FA8EE8 /* TYTabPagerBarLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D3822906A6A00FA8EE8 /* TYTabPagerBarLayout.m */; };
+		B52A1D4922906A6B00FA8EE8 /* TYTabPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D3B22906A6A00FA8EE8 /* TYTabPagerView.m */; };
+		B52A1D4A22906A6B00FA8EE8 /* TYTabPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D3E22906A6A00FA8EE8 /* TYTabPagerController.m */; };
+		B52A1D4B22906A6B00FA8EE8 /* TYTabPagerBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D3F22906A6A00FA8EE8 /* TYTabPagerBarCell.m */; };
+		B52A1D4C22906A6B00FA8EE8 /* TYPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D4122906A6A00FA8EE8 /* TYPagerView.m */; };
+		B5BFD0B6229123E3006B44A8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFD0B5229123E3006B44A8 /* InfoViewController.swift */; };
+		B5BFD0B822918FDE006B44A8 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFD0B722918FDE006B44A8 /* InfoTableViewCell.swift */; };
+		B5BFD0BA2291B020006B44A8 /* NewTaipeiCityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFD0B92291B020006B44A8 /* NewTaipeiCityAPI.swift */; };
+		B5BFD0BC2291B5F1006B44A8 /* GarbageTruckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFD0BB2291B5F1006B44A8 /* GarbageTruckModel.swift */; };
+		B5BFD0BE229243A7006B44A8 /* GasPriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFD0BD229243A7006B44A8 /* GasPriceModel.swift */; };
+		B5F0B3DA2296E8BA002CD895 /* BuyingHouseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3D92296E8BA002CD895 /* BuyingHouseCollectionViewController.swift */; };
+		B5F0B3DC2297CF76002CD895 /* BuyingHouseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3DB2297CF75002CD895 /* BuyingHouseCollectionViewCell.swift */; };
+		B5F0B3DF229AD8C1002CD895 /* NTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3DE229AD8C1002CD895 /* NTService.swift */; };
+		B5F0B3E1229AF925002CD895 /* NT_AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3E0229AF925002CD895 /* NT_AlertManager.swift */; };
+		B5F0B3E3229AFACE002CD895 /* NT_CommonNameHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3E2229AFACE002CD895 /* NT_CommonNameHeader.swift */; };
+		B5F0B3E5229C3BEE002CD895 /* BuyingHouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3E4229C3BED002CD895 /* BuyingHouseTableViewCell.swift */; };
+		B5F0B3E7229C44ED002CD895 /* BuyingHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3E6229C44ED002CD895 /* BuyingHouseViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5F84070D26563226F01F9EE7 /* Pods-NewTaipeiCityInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTaipeiCityInfo.release.xcconfig"; path = "Target Support Files/Pods-NewTaipeiCityInfo/Pods-NewTaipeiCityInfo.release.xcconfig"; sourceTree = "<group>"; };
+		893C444153F2DA96351E1765 /* Pods_NewTaipeiCityInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewTaipeiCityInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA876C51529C0150759AD9D8 /* Pods-NewTaipeiCityInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTaipeiCityInfo.debug.xcconfig"; path = "Target Support Files/Pods-NewTaipeiCityInfo/Pods-NewTaipeiCityInfo.debug.xcconfig"; sourceTree = "<group>"; };
+		B510AE7D2326390E00B45D00 /* PoliceDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceDataModel.swift; sourceTree = "<group>"; };
+		B510AE7F23263BD000B45D00 /* policeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = policeViewController.swift; sourceTree = "<group>"; };
+		B510AE81232647AB00B45D00 /* PoliceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceTableViewCell.swift; sourceTree = "<group>"; };
+		B52A1D1B229064F000FA8EE8 /* NewTaipeiCityInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewTaipeiCityInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52A1D1E229064F100FA8EE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B52A1D20229064F100FA8EE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B52A1D23229064F100FA8EE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B52A1D26229064F100FA8EE8 /* NewTaipeiCityInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewTaipeiCityInfo.xcdatamodel; sourceTree = "<group>"; };
+		B52A1D28229064F300FA8EE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B52A1D2B229064F300FA8EE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B52A1D2D229064F300FA8EE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B52A1D3422906A6A00FA8EE8 /* TYPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPagerController.m; sourceTree = "<group>"; };
+		B52A1D3522906A6A00FA8EE8 /* TYPagerViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPagerViewLayout.m; sourceTree = "<group>"; };
+		B52A1D3722906A6A00FA8EE8 /* TYTabPagerBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabPagerBar.m; sourceTree = "<group>"; };
+		B52A1D3822906A6A00FA8EE8 /* TYTabPagerBarLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabPagerBarLayout.m; sourceTree = "<group>"; };
+		B52A1D3922906A6A00FA8EE8 /* TYTabPagerBarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabPagerBarCell.h; sourceTree = "<group>"; };
+		B52A1D3A22906A6A00FA8EE8 /* TYTabPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabPagerController.h; sourceTree = "<group>"; };
+		B52A1D3B22906A6A00FA8EE8 /* TYTabPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabPagerView.m; sourceTree = "<group>"; };
+		B52A1D3C22906A6A00FA8EE8 /* TYTabPagerBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabPagerBar.h; sourceTree = "<group>"; };
+		B52A1D3D22906A6A00FA8EE8 /* TYTabPagerBarLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabPagerBarLayout.h; sourceTree = "<group>"; };
+		B52A1D3E22906A6A00FA8EE8 /* TYTabPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabPagerController.m; sourceTree = "<group>"; };
+		B52A1D3F22906A6A00FA8EE8 /* TYTabPagerBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabPagerBarCell.m; sourceTree = "<group>"; };
+		B52A1D4022906A6A00FA8EE8 /* TYTabPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabPagerView.h; sourceTree = "<group>"; };
+		B52A1D4122906A6A00FA8EE8 /* TYPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPagerView.m; sourceTree = "<group>"; };
+		B52A1D4222906A6A00FA8EE8 /* TYPagerViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPagerViewLayout.h; sourceTree = "<group>"; };
+		B52A1D4322906A6A00FA8EE8 /* TYPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPagerController.h; sourceTree = "<group>"; };
+		B52A1D4422906A6A00FA8EE8 /* TYPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPagerView.h; sourceTree = "<group>"; };
+		B52A1D552290721500FA8EE8 /* NewTaipeiCityInfo-Brdging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewTaipeiCityInfo-Brdging-Header.h"; sourceTree = "<group>"; };
+		B5BFD0B5229123E3006B44A8 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		B5BFD0B722918FDE006B44A8 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		B5BFD0B92291B020006B44A8 /* NewTaipeiCityAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaipeiCityAPI.swift; sourceTree = "<group>"; };
+		B5BFD0BB2291B5F1006B44A8 /* GarbageTruckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageTruckModel.swift; sourceTree = "<group>"; };
+		B5BFD0BD229243A7006B44A8 /* GasPriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasPriceModel.swift; sourceTree = "<group>"; };
+		B5F0B3D92296E8BA002CD895 /* BuyingHouseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingHouseCollectionViewController.swift; sourceTree = "<group>"; };
+		B5F0B3DB2297CF75002CD895 /* BuyingHouseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingHouseCollectionViewCell.swift; sourceTree = "<group>"; };
+		B5F0B3DE229AD8C1002CD895 /* NTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTService.swift; sourceTree = "<group>"; };
+		B5F0B3E0229AF925002CD895 /* NT_AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NT_AlertManager.swift; sourceTree = "<group>"; };
+		B5F0B3E2229AFACE002CD895 /* NT_CommonNameHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NT_CommonNameHeader.swift; sourceTree = "<group>"; };
+		B5F0B3E4229C3BED002CD895 /* BuyingHouseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingHouseTableViewCell.swift; sourceTree = "<group>"; };
+		B5F0B3E6229C44ED002CD895 /* BuyingHouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingHouseViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B52A1D18229064F000FA8EE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD4369B8EB6CC3B4370105D /* Pods_NewTaipeiCityInfo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A0A5D2D31A33C4AAC4085FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				893C444153F2DA96351E1765 /* Pods_NewTaipeiCityInfo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CDAD4974AD6C7938E92544A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA876C51529C0150759AD9D8 /* Pods-NewTaipeiCityInfo.debug.xcconfig */,
+				5F84070D26563226F01F9EE7 /* Pods-NewTaipeiCityInfo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B52A1D12229064F000FA8EE8 = {
+			isa = PBXGroup;
+			children = (
+				B52A1D1D229064F000FA8EE8 /* NewTaipeiCityInfo */,
+				B5BFD0C12292442C006B44A8 /* Supporting Files */,
+				B52A1D1C229064F000FA8EE8 /* Products */,
+				9CDAD4974AD6C7938E92544A /* Pods */,
+				2A0A5D2D31A33C4AAC4085FD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B52A1D1C229064F000FA8EE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B52A1D1B229064F000FA8EE8 /* NewTaipeiCityInfo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B52A1D1D229064F000FA8EE8 /* NewTaipeiCityInfo */ = {
+			isa = PBXGroup;
+			children = (
+				B52A1D552290721500FA8EE8 /* NewTaipeiCityInfo-Brdging-Header.h */,
+				B5F0B3DD229AD887002CD895 /* Service */,
+				B5BFD0C222924457006B44A8 /* Storyboard */,
+				B5BFD0C0229243DC006B44A8 /* Libraries */,
+				B5BFD0C42294DAFA006B44A8 /* ViewContrlloer */,
+				B5BFD0BF229243C3006B44A8 /* Model */,
+				B52A1D2D229064F300FA8EE8 /* Info.plist */,
+			);
+			path = NewTaipeiCityInfo;
+			sourceTree = "<group>";
+		};
+		B52A1D3322906A6A00FA8EE8 /* TYPagerController */ = {
+			isa = PBXGroup;
+			children = (
+				B52A1D3422906A6A00FA8EE8 /* TYPagerController.m */,
+				B52A1D3522906A6A00FA8EE8 /* TYPagerViewLayout.m */,
+				B52A1D3622906A6A00FA8EE8 /* TabPager */,
+				B52A1D4122906A6A00FA8EE8 /* TYPagerView.m */,
+				B52A1D4222906A6A00FA8EE8 /* TYPagerViewLayout.h */,
+				B52A1D4322906A6A00FA8EE8 /* TYPagerController.h */,
+				B52A1D4422906A6A00FA8EE8 /* TYPagerView.h */,
+			);
+			path = TYPagerController;
+			sourceTree = "<group>";
+		};
+		B52A1D3622906A6A00FA8EE8 /* TabPager */ = {
+			isa = PBXGroup;
+			children = (
+				B52A1D3722906A6A00FA8EE8 /* TYTabPagerBar.m */,
+				B52A1D3822906A6A00FA8EE8 /* TYTabPagerBarLayout.m */,
+				B52A1D3922906A6A00FA8EE8 /* TYTabPagerBarCell.h */,
+				B52A1D3A22906A6A00FA8EE8 /* TYTabPagerController.h */,
+				B52A1D3B22906A6A00FA8EE8 /* TYTabPagerView.m */,
+				B52A1D3C22906A6A00FA8EE8 /* TYTabPagerBar.h */,
+				B52A1D3D22906A6A00FA8EE8 /* TYTabPagerBarLayout.h */,
+				B52A1D3E22906A6A00FA8EE8 /* TYTabPagerController.m */,
+				B52A1D3F22906A6A00FA8EE8 /* TYTabPagerBarCell.m */,
+				B52A1D4022906A6A00FA8EE8 /* TYTabPagerView.h */,
+			);
+			path = TabPager;
+			sourceTree = "<group>";
+		};
+		B5BFD0BF229243C3006B44A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5BFD0BB2291B5F1006B44A8 /* GarbageTruckModel.swift */,
+				B5BFD0BD229243A7006B44A8 /* GasPriceModel.swift */,
+				B510AE7D2326390E00B45D00 /* PoliceDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5BFD0C0229243DC006B44A8 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				B52A1D3322906A6A00FA8EE8 /* TYPagerController */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		B5BFD0C12292442C006B44A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B52A1D1E229064F100FA8EE8 /* AppDelegate.swift */,
+				B5BFD0B92291B020006B44A8 /* NewTaipeiCityAPI.swift */,
+				B52A1D28229064F300FA8EE8 /* Assets.xcassets */,
+				B52A1D25229064F100FA8EE8 /* NewTaipeiCityInfo.xcdatamodeld */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5BFD0C222924457006B44A8 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B52A1D22229064F100FA8EE8 /* Main.storyboard */,
+				B52A1D2A229064F300FA8EE8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B5BFD0C32294DAD2006B44A8 /* DataCell */ = {
+			isa = PBXGroup;
+			children = (
+				B5BFD0B722918FDE006B44A8 /* InfoTableViewCell.swift */,
+				B510AE81232647AB00B45D00 /* PoliceTableViewCell.swift */,
+				B5F0B3DB2297CF75002CD895 /* BuyingHouseCollectionViewCell.swift */,
+				B5F0B3E4229C3BED002CD895 /* BuyingHouseTableViewCell.swift */,
+			);
+			path = DataCell;
+			sourceTree = "<group>";
+		};
+		B5BFD0C42294DAFA006B44A8 /* ViewContrlloer */ = {
+			isa = PBXGroup;
+			children = (
+				B5F0B3E6229C44ED002CD895 /* BuyingHouseViewController.swift */,
+				B510AE7F23263BD000B45D00 /* policeViewController.swift */,
+				B52A1D20229064F100FA8EE8 /* HomeViewController.swift */,
+				B5F0B3D92296E8BA002CD895 /* BuyingHouseCollectionViewController.swift */,
+				B5BFD0B5229123E3006B44A8 /* InfoViewController.swift */,
+				B5BFD0C32294DAD2006B44A8 /* DataCell */,
+			);
+			path = ViewContrlloer;
+			sourceTree = "<group>";
+		};
+		B5F0B3DD229AD887002CD895 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B5F0B3DE229AD8C1002CD895 /* NTService.swift */,
+				B5F0B3E0229AF925002CD895 /* NT_AlertManager.swift */,
+				B5F0B3E2229AFACE002CD895 /* NT_CommonNameHeader.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B52A1D1A229064F000FA8EE8 /* NewTaipeiCityInfo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B52A1D30229064F300FA8EE8 /* Build configuration list for PBXNativeTarget "NewTaipeiCityInfo" */;
+			buildPhases = (
+				955D6DF280D09237D9735B45 /* [CP] Check Pods Manifest.lock */,
+				B52A1D17229064F000FA8EE8 /* Sources */,
+				B52A1D18229064F000FA8EE8 /* Frameworks */,
+				B52A1D19229064F000FA8EE8 /* Resources */,
+				6EAEA79BC14AFEDB771A78AB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NewTaipeiCityInfo;
+			productName = NewTaipeiCityInfo;
+			productReference = B52A1D1B229064F000FA8EE8 /* NewTaipeiCityInfo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B52A1D13229064F000FA8EE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Neo Chou";
+				TargetAttributes = {
+					B52A1D1A229064F000FA8EE8 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = B52A1D16229064F000FA8EE8 /* Build configuration list for PBXProject "NewTaipeiCityInfo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B52A1D12229064F000FA8EE8;
+			productRefGroup = B52A1D1C229064F000FA8EE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B52A1D1A229064F000FA8EE8 /* NewTaipeiCityInfo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B52A1D19229064F000FA8EE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B52A1D2C229064F300FA8EE8 /* LaunchScreen.storyboard in Resources */,
+				B52A1D29229064F300FA8EE8 /* Assets.xcassets in Resources */,
+				B52A1D24229064F100FA8EE8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6EAEA79BC14AFEDB771A78AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewTaipeiCityInfo/Pods-NewTaipeiCityInfo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewTaipeiCityInfo/Pods-NewTaipeiCityInfo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		955D6DF280D09237D9735B45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NewTaipeiCityInfo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B52A1D17229064F000FA8EE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5BFD0B822918FDE006B44A8 /* InfoTableViewCell.swift in Sources */,
+				B52A1D4A22906A6B00FA8EE8 /* TYTabPagerController.m in Sources */,
+				B52A1D27229064F100FA8EE8 /* NewTaipeiCityInfo.xcdatamodeld in Sources */,
+				B52A1D4922906A6B00FA8EE8 /* TYTabPagerView.m in Sources */,
+				B52A1D21229064F100FA8EE8 /* HomeViewController.swift in Sources */,
+				B5F0B3DA2296E8BA002CD895 /* BuyingHouseCollectionViewController.swift in Sources */,
+				B52A1D4C22906A6B00FA8EE8 /* TYPagerView.m in Sources */,
+				B510AE7E2326390E00B45D00 /* PoliceDataModel.swift in Sources */,
+				B5F0B3E3229AFACE002CD895 /* NT_CommonNameHeader.swift in Sources */,
+				B52A1D4B22906A6B00FA8EE8 /* TYTabPagerBarCell.m in Sources */,
+				B510AE8023263BD000B45D00 /* policeViewController.swift in Sources */,
+				B5BFD0BE229243A7006B44A8 /* GasPriceModel.swift in Sources */,
+				B5F0B3DF229AD8C1002CD895 /* NTService.swift in Sources */,
+				B5F0B3E7229C44ED002CD895 /* BuyingHouseViewController.swift in Sources */,
+				B52A1D4522906A6B00FA8EE8 /* TYPagerController.m in Sources */,
+				B5BFD0BC2291B5F1006B44A8 /* GarbageTruckModel.swift in Sources */,
+				B52A1D4622906A6B00FA8EE8 /* TYPagerViewLayout.m in Sources */,
+				B510AE82232647AB00B45D00 /* PoliceTableViewCell.swift in Sources */,
+				B52A1D4722906A6B00FA8EE8 /* TYTabPagerBar.m in Sources */,
+				B5BFD0BA2291B020006B44A8 /* NewTaipeiCityAPI.swift in Sources */,
+				B52A1D1F229064F100FA8EE8 /* AppDelegate.swift in Sources */,
+				B5F0B3DC2297CF76002CD895 /* BuyingHouseCollectionViewCell.swift in Sources */,
+				B5F0B3E5229C3BEE002CD895 /* BuyingHouseTableViewCell.swift in Sources */,
+				B5BFD0B6229123E3006B44A8 /* InfoViewController.swift in Sources */,
+				B5F0B3E1229AF925002CD895 /* NT_AlertManager.swift in Sources */,
+				B52A1D4822906A6B00FA8EE8 /* TYTabPagerBarLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B52A1D22229064F100FA8EE8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B52A1D23229064F100FA8EE8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B52A1D2A229064F300FA8EE8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B52A1D2B229064F300FA8EE8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B52A1D2E229064F300FA8EE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B52A1D2F229064F300FA8EE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B52A1D31229064F300FA8EE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA876C51529C0150759AD9D8 /* Pods-NewTaipeiCityInfo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ZD6RQ7H2K;
+				INFOPLIST_FILE = NewTaipeiCityInfo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.inow.NewTaipeiCityInfo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NewTaipeiCityInfo/NewTaipeiCityInfo-Brdging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B52A1D32229064F300FA8EE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F84070D26563226F01F9EE7 /* Pods-NewTaipeiCityInfo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ZD6RQ7H2K;
+				INFOPLIST_FILE = NewTaipeiCityInfo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.inow.NewTaipeiCityInfo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NewTaipeiCityInfo/NewTaipeiCityInfo-Brdging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B52A1D16229064F000FA8EE8 /* Build configuration list for PBXProject "NewTaipeiCityInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B52A1D2E229064F300FA8EE8 /* Debug */,
+				B52A1D2F229064F300FA8EE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B52A1D30229064F300FA8EE8 /* Build configuration list for PBXNativeTarget "NewTaipeiCityInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B52A1D31229064F300FA8EE8 /* Debug */,
+				B52A1D32229064F300FA8EE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B52A1D25229064F100FA8EE8 /* NewTaipeiCityInfo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B52A1D26229064F100FA8EE8 /* NewTaipeiCityInfo.xcdatamodel */,
+			);
+			currentVersion = B52A1D26229064F100FA8EE8 /* NewTaipeiCityInfo.xcdatamodel */;
+			path = NewTaipeiCityInfo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B52A1D13229064F000FA8EE8 /* Project object */;
+}
