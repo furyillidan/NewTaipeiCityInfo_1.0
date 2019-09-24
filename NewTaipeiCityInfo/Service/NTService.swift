@@ -25,7 +25,7 @@ class NTService: NSObject {
            getRequsetWithURLString(url, parameter, callback)
     }
  
-     func getRequsetWithURLString(_ url:String,_ parameter:[String: Any]?,_ callback:@escaping (DataResponse<Any>) -> Void ) {
+    private func getRequsetWithURLString(_ url:String,_ parameter:[String: Any]?,_ callback:@escaping (DataResponse<Any>) -> Void ) {
         
         NTService.AFManager.request(url, method: .get, parameters: parameter, encoding: URLEncoding.default, headers:nil).responseJSON { (response:DataResponse) in
             

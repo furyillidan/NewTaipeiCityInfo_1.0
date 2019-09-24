@@ -26,4 +26,12 @@ class NTAlertManager: NSObject {
         }
     }
     
+    func callAlertView (alertTitle: String?, alertMessage: String?, actionTitle: String?, view: UIViewController?) {
+        
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        let action = UIAlertAction(title: actionTitle, style: .default, handler: nil)
+        alert.addAction(action)
+        view?.present(alert, animated: true, completion: nil)
+    }
+    
 }

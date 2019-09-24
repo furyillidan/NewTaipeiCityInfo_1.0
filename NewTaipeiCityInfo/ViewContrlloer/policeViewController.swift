@@ -17,7 +17,7 @@ class policeViewController: UIViewController {
         
         self.policeTableView.delegate = self
         self.policeTableView.dataSource = self
-        self.policeTableView.estimatedRowHeight = 180.0;
+        self.policeTableView.estimatedRowHeight = 120.0;
         self.policeTableView.rowHeight = 120;
 
         self.view.backgroundColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.2)

@@ -51,14 +51,6 @@ let iNavMore        = "CTNavigationMore"
 /// storyboard name
 
 let MainStoryboard      = "Main"
-let HomeStoryboard      = "Home"
-let ScoreStoryboard     = "Score"
-let VideoStoryboard     = "Video"
-let VoteStoryboard      = "Vote"
-let MoreStoryboard      = "More"
-let SearchStoryboard    = "Search"
-let CommonStoryboard    = "Common"
-let ArticleStoryboard   = "Article"
 
 /// button title text
 
@@ -97,4 +89,5 @@ let SIZE_BIG       = "大"
 let SIZE_EXTRA_BIG = "特大"
 
 
-
+//color
+let detailBackColor = UIColor(red: 1, green: 0.3, blue: 0, alpha: 0.1)

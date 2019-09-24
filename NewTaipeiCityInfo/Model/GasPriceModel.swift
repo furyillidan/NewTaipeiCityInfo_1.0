@@ -36,3 +36,6 @@ struct GasPriceRecordsItem : Codable {
     var price1: String?
     var price2: String?
 }
+
+
+

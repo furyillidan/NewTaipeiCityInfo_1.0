@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2BD4369B8EB6CC3B4370105D /* Pods_NewTaipeiCityInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893C444153F2DA96351E1765 /* Pods_NewTaipeiCityInfo.framework */; };
+		B507635B232F1F0400B4A471 /* priceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B507635A232F1F0400B4A471 /* priceDetailViewController.swift */; };
+		B507635D2334BE8A00B4A471 /* GasCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = B507635C2334BE8A00B4A471 /* GasCompany.swift */; };
+		B50A6ACE2338655A00B7293E /* priceDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50A6ACD2338655A00B7293E /* priceDetailTableViewCell.swift */; };
 		B510AE7E2326390E00B45D00 /* PoliceDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510AE7D2326390E00B45D00 /* PoliceDataModel.swift */; };
 		B510AE8023263BD000B45D00 /* policeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510AE7F23263BD000B45D00 /* policeViewController.swift */; };
 		B510AE82232647AB00B45D00 /* PoliceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510AE81232647AB00B45D00 /* PoliceTableViewCell.swift */; };
@@ -30,19 +33,18 @@
 		B5BFD0BA2291B020006B44A8 /* NewTaipeiCityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFD0B92291B020006B44A8 /* NewTaipeiCityAPI.swift */; };
 		B5BFD0BC2291B5F1006B44A8 /* GarbageTruckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFD0BB2291B5F1006B44A8 /* GarbageTruckModel.swift */; };
 		B5BFD0BE229243A7006B44A8 /* GasPriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFD0BD229243A7006B44A8 /* GasPriceModel.swift */; };
-		B5F0B3DA2296E8BA002CD895 /* BuyingHouseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3D92296E8BA002CD895 /* BuyingHouseCollectionViewController.swift */; };
-		B5F0B3DC2297CF76002CD895 /* BuyingHouseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3DB2297CF75002CD895 /* BuyingHouseCollectionViewCell.swift */; };
 		B5F0B3DF229AD8C1002CD895 /* NTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3DE229AD8C1002CD895 /* NTService.swift */; };
 		B5F0B3E1229AF925002CD895 /* NT_AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3E0229AF925002CD895 /* NT_AlertManager.swift */; };
 		B5F0B3E3229AFACE002CD895 /* NT_CommonNameHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3E2229AFACE002CD895 /* NT_CommonNameHeader.swift */; };
-		B5F0B3E5229C3BEE002CD895 /* BuyingHouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3E4229C3BED002CD895 /* BuyingHouseTableViewCell.swift */; };
-		B5F0B3E7229C44ED002CD895 /* BuyingHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3E6229C44ED002CD895 /* BuyingHouseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F84070D26563226F01F9EE7 /* Pods-NewTaipeiCityInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTaipeiCityInfo.release.xcconfig"; path = "Target Support Files/Pods-NewTaipeiCityInfo/Pods-NewTaipeiCityInfo.release.xcconfig"; sourceTree = "<group>"; };
 		893C444153F2DA96351E1765 /* Pods_NewTaipeiCityInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewTaipeiCityInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA876C51529C0150759AD9D8 /* Pods-NewTaipeiCityInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTaipeiCityInfo.debug.xcconfig"; path = "Target Support Files/Pods-NewTaipeiCityInfo/Pods-NewTaipeiCityInfo.debug.xcconfig"; sourceTree = "<group>"; };
+		B507635A232F1F0400B4A471 /* priceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = priceDetailViewController.swift; sourceTree = "<group>"; };
+		B507635C2334BE8A00B4A471 /* GasCompany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasCompany.swift; sourceTree = "<group>"; };
+		B50A6ACD2338655A00B7293E /* priceDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = priceDetailTableViewCell.swift; sourceTree = "<group>"; };
 		B510AE7D2326390E00B45D00 /* PoliceDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceDataModel.swift; sourceTree = "<group>"; };
 		B510AE7F23263BD000B45D00 /* policeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = policeViewController.swift; sourceTree = "<group>"; };
 		B510AE81232647AB00B45D00 /* PoliceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceTableViewCell.swift; sourceTree = "<group>"; };
@@ -76,13 +78,9 @@
 		B5BFD0B92291B020006B44A8 /* NewTaipeiCityAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaipeiCityAPI.swift; sourceTree = "<group>"; };
 		B5BFD0BB2291B5F1006B44A8 /* GarbageTruckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageTruckModel.swift; sourceTree = "<group>"; };
 		B5BFD0BD229243A7006B44A8 /* GasPriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasPriceModel.swift; sourceTree = "<group>"; };
-		B5F0B3D92296E8BA002CD895 /* BuyingHouseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingHouseCollectionViewController.swift; sourceTree = "<group>"; };
-		B5F0B3DB2297CF75002CD895 /* BuyingHouseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingHouseCollectionViewCell.swift; sourceTree = "<group>"; };
 		B5F0B3DE229AD8C1002CD895 /* NTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTService.swift; sourceTree = "<group>"; };
 		B5F0B3E0229AF925002CD895 /* NT_AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NT_AlertManager.swift; sourceTree = "<group>"; };
 		B5F0B3E2229AFACE002CD895 /* NT_CommonNameHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NT_CommonNameHeader.swift; sourceTree = "<group>"; };
-		B5F0B3E4229C3BED002CD895 /* BuyingHouseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingHouseTableViewCell.swift; sourceTree = "<group>"; };
-		B5F0B3E6229C44ED002CD895 /* BuyingHouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingHouseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +181,7 @@
 			children = (
 				B5BFD0BB2291B5F1006B44A8 /* GarbageTruckModel.swift */,
 				B5BFD0BD229243A7006B44A8 /* GasPriceModel.swift */,
+				B507635C2334BE8A00B4A471 /* GasCompany.swift */,
 				B510AE7D2326390E00B45D00 /* PoliceDataModel.swift */,
 			);
 			path = Model;
@@ -220,9 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				B5BFD0B722918FDE006B44A8 /* InfoTableViewCell.swift */,
+				B50A6ACD2338655A00B7293E /* priceDetailTableViewCell.swift */,
 				B510AE81232647AB00B45D00 /* PoliceTableViewCell.swift */,
-				B5F0B3DB2297CF75002CD895 /* BuyingHouseCollectionViewCell.swift */,
-				B5F0B3E4229C3BED002CD895 /* BuyingHouseTableViewCell.swift */,
 			);
 			path = DataCell;
 			sourceTree = "<group>";
@@ -230,11 +228,10 @@
 		B5BFD0C42294DAFA006B44A8 /* ViewContrlloer */ = {
 			isa = PBXGroup;
 			children = (
-				B5F0B3E6229C44ED002CD895 /* BuyingHouseViewController.swift */,
 				B510AE7F23263BD000B45D00 /* policeViewController.swift */,
 				B52A1D20229064F100FA8EE8 /* HomeViewController.swift */,
-				B5F0B3D92296E8BA002CD895 /* BuyingHouseCollectionViewController.swift */,
 				B5BFD0B5229123E3006B44A8 /* InfoViewController.swift */,
+				B507635A232F1F0400B4A471 /* priceDetailViewController.swift */,
 				B5BFD0C32294DAD2006B44A8 /* DataCell */,
 			);
 			path = ViewContrlloer;
@@ -378,20 +375,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B50A6ACE2338655A00B7293E /* priceDetailTableViewCell.swift in Sources */,
 				B5BFD0B822918FDE006B44A8 /* InfoTableViewCell.swift in Sources */,
 				B52A1D4A22906A6B00FA8EE8 /* TYTabPagerController.m in Sources */,
 				B52A1D27229064F100FA8EE8 /* NewTaipeiCityInfo.xcdatamodeld in Sources */,
 				B52A1D4922906A6B00FA8EE8 /* TYTabPagerView.m in Sources */,
 				B52A1D21229064F100FA8EE8 /* HomeViewController.swift in Sources */,
-				B5F0B3DA2296E8BA002CD895 /* BuyingHouseCollectionViewController.swift in Sources */,
 				B52A1D4C22906A6B00FA8EE8 /* TYPagerView.m in Sources */,
 				B510AE7E2326390E00B45D00 /* PoliceDataModel.swift in Sources */,
 				B5F0B3E3229AFACE002CD895 /* NT_CommonNameHeader.swift in Sources */,
+				B507635D2334BE8A00B4A471 /* GasCompany.swift in Sources */,
 				B52A1D4B22906A6B00FA8EE8 /* TYTabPagerBarCell.m in Sources */,
 				B510AE8023263BD000B45D00 /* policeViewController.swift in Sources */,
+				B507635B232F1F0400B4A471 /* priceDetailViewController.swift in Sources */,
 				B5BFD0BE229243A7006B44A8 /* GasPriceModel.swift in Sources */,
 				B5F0B3DF229AD8C1002CD895 /* NTService.swift in Sources */,
-				B5F0B3E7229C44ED002CD895 /* BuyingHouseViewController.swift in Sources */,
 				B52A1D4522906A6B00FA8EE8 /* TYPagerController.m in Sources */,
 				B5BFD0BC2291B5F1006B44A8 /* GarbageTruckModel.swift in Sources */,
 				B52A1D4622906A6B00FA8EE8 /* TYPagerViewLayout.m in Sources */,
@@ -399,8 +397,6 @@
 				B52A1D4722906A6B00FA8EE8 /* TYTabPagerBar.m in Sources */,
 				B5BFD0BA2291B020006B44A8 /* NewTaipeiCityAPI.swift in Sources */,
 				B52A1D1F229064F100FA8EE8 /* AppDelegate.swift in Sources */,
-				B5F0B3DC2297CF76002CD895 /* BuyingHouseCollectionViewCell.swift in Sources */,
-				B5F0B3E5229C3BEE002CD895 /* BuyingHouseTableViewCell.swift in Sources */,
 				B5BFD0B6229123E3006B44A8 /* InfoViewController.swift in Sources */,
 				B5F0B3E1229AF925002CD895 /* NT_AlertManager.swift in Sources */,
 				B52A1D4822906A6B00FA8EE8 /* TYTabPagerBarLayout.m in Sources */,
