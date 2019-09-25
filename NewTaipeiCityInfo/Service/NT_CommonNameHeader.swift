@@ -90,4 +90,4 @@ let SIZE_EXTRA_BIG = "特大"
 
 
 //color
-let detailBackColor = UIColor(red: 1, green: 0.3, blue: 0, alpha: 0.1)
+let detailBackColor = UIColor(red: 1, green: 0.3, blue: 0, alpha: 0.25)

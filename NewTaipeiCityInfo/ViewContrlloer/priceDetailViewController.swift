@@ -21,7 +21,7 @@ class priceDetailViewController: UIViewController {
         super.viewDidLoad()
 
         self.naviTitleView.text = "配合簽定供氣契約瓦斯行清冊"
-        self.naviView.backgroundColor = detailBackColor
+        self.naviView.backgroundColor = UIColor(red: 1, green: 0.2, blue: 0.3, alpha: 0.35)
         
         self.priceDetailTableView.delegate = self
         self.priceDetailTableView.dataSource = self
@@ -84,14 +84,28 @@ extension priceDetailViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "priceDetailTableViewCell", for: indexPath) as! priceDetailTableViewCell
 
         cell.placeNameLabel.text = "店名 : \(self.gasCompanyList[indexPath.row].place_name ?? "")"
-        cell.addressBtn.setTitle("地址 : \(self.gasCompanyList[indexPath.row].address ?? "")", for: .normal) 
-        cell.telBtn.setTitle("公司電話 : \(self.gasCompanyList[indexPath.row].company_telephone ?? "")", for: .normal)
-        cell.contactPerson.text = "聯絡人 : \(self.gasCompanyList[indexPath.row].contact_person ?? "")"
-        cell.mobilePhoneBtn.setTitle("手機號碼 : \(self.gasCompanyList[indexPath.row].mobile_phone ?? "")", for: .normal)
         
+        let addressAttStr = stringToAttributes(titleStr: "地址 : \(self.gasCompanyList[indexPath.row].address ?? "")", size: 16)
+        cell.addressBtn.setAttributedTitle(addressAttStr, for: .normal)
+        
+        let telAttStr = stringToAttributes(titleStr: "公司電話 : \(self.gasCompanyList[indexPath.row].company_telephone ?? "")", size: 16)
+        cell.telBtn.setAttributedTitle(telAttStr, for: .normal)
+       
+        cell.contactPerson.text = "聯絡人 : \(self.gasCompanyList[indexPath.row].contact_person ?? "")"
+        
+        let mobileAttStr = stringToAttributes(titleStr: "手機號碼 : \(self.gasCompanyList[indexPath.row].mobile_phone ?? "")", size: 16)
+      
+        cell.mobilePhoneBtn.setAttributedTitle(mobileAttStr, for: .normal)
+
         UserDefaults.standard.set(self.gasCompanyList[indexPath.row].company_telephone ?? "", forKey: "tel")
         UserDefaults.standard.set(self.gasCompanyList[indexPath.row].mobile_phone ?? "", forKey: "mobile")
         return cell
+    }
+    
+    func stringToAttributes (titleStr: String?, size: CGFloat?) -> NSMutableAttributedString? {
+        let strAttributes : [NSAttributedString.Key : Any] = [.font: UIFont.systemFont(ofSize: size!),.foregroundColor: UIColor.black, .underlineStyle: NSUnderlineStyle.single.rawValue]
+        let strAttStr = NSMutableAttributedString(string: titleStr!,attributes: strAttributes)
+        return strAttStr
     }
     
 }
