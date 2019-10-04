@@ -14,10 +14,12 @@ class HomeViewController: UIViewController {
     lazy var pagerController = TYPagerController()
     lazy var naviView = UIView()
     lazy var leftNaviBtn = UIButton()
+    lazy var rightNaviBtn = UIButton()
     lazy var datas = [String]()
+    lazy var titleLabel = UILabel()
 
-    var data = ["瓦斯價格","警局資訊","就醫","交通及通訊","休閒旅遊","生育保健","老年安養","生活安全及品質","求學及進修","生命禮儀"]
-    //公共資訊 ,購屋及遷徙, 就醫, 交通及通訊, 休閒旅遊, 生育保健, 老年安養, 生活安全及品質, 求學及進修 生命禮儀
+    var data = ["瓦斯價格","警局資訊","醫院資訊","拖吊保管場資訊","休閒旅遊"]
+                //,"生育保健","老年安養","生活安全及品質","求學及進修","生命禮儀"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,10 +37,18 @@ class HomeViewController: UIViewController {
         self.naviView.backgroundColor = UIColor(red: 0.9, green: 0.8, blue: 0.7, alpha: 1)
         self.view.addSubview(self.naviView)
         self.leftNaviBtn.frame = CGRect(x: 10, y: 0, width: 44, height: 44)
-        self.leftNaviBtn.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
         self.leftNaviBtn.addTarget(self, action: #selector(leftNaviBtnTouch), for: .touchUpInside)
+        self.rightNaviBtn.frame = CGRect(x: screenSize.width - 54, y: 0, width: 44, height: 44)
+        self.rightNaviBtn.setImage(UIImage(named: "info"), for: .normal)
+        self.rightNaviBtn.addTarget(self, action: #selector(rightNaviBtnTouch), for: .touchUpInside)
+        self.titleLabel.frame = CGRect(x: self.view.frame.width / 2 - 100, y: 0, width: 200, height: self.naviView.frame.size.height)
+        self.titleLabel.text = "新北市資訊"
+        self.titleLabel.font = .systemFont(ofSize: 20)
+        self.titleLabel.textAlignment = .center
+        self.naviView.addSubview(titleLabel)
         self.naviView.addSubview(leftNaviBtn)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "oo", style: .done, target: self, action: #selector(rightNaviBtnTouch))
+        self.naviView.addSubview(rightNaviBtn)
+      
     }
 
     func addTabPagerBar() {
@@ -71,10 +81,21 @@ class HomeViewController: UIViewController {
         
     }
     
-    @objc func rightNaviBtnTouch () {
+    @objc func rightNaviBtnTouch() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if #available(iOS 13.0, *) {
+            let vc = storyboard.instantiateViewController(identifier: "popoverViewController")
+            vc.modalPresentationStyle = .popover
+            vc.popoverPresentationController?.delegate = self
+            vc.popoverPresentationController?.sourceView = rightNaviBtn
+            vc.popoverPresentationController?.sourceRect = CGRect(x: self.rightNaviBtn.bounds.midX, y: self.rightNaviBtn.bounds.midY , width: 0, height: 0)
+            vc.preferredContentSize = CGSize(width: 300, height: 70)
+            self.present(vc, animated: true, completion: nil)
+        } else {
+            // Fallback on earlier versions
+        }
         
     }
-
 }
 
 // TYTabPagerBar delegate
@@ -113,20 +134,10 @@ extension HomeViewController: TYPagerControllerDataSource, TYPagerControllerDele
     
     func pagerController(_ pagerController: TYPagerController, controllerFor index: Int, prefetching: Bool) -> UIViewController {
 
-        switch index {
-        case 0:
             let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
             let vc = storyBoard.instantiateViewController(withIdentifier: "InfoViewController") as! InfoViewController
+            vc.witchOne = index
             return vc
-        case 1:
-            let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let vc = storyBoard.instantiateViewController(withIdentifier: "policeViewController") as! policeViewController
-            return vc
-        default:
-            let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let vc = storyBoard.instantiateViewController(withIdentifier: "InfoViewController")
-            return vc
-        }
     }
     
     func pagerController(_ pagerController: TYPagerController, transitionFrom fromIndex: Int, to toIndex: Int, animated: Bool) {
@@ -137,4 +148,10 @@ extension HomeViewController: TYPagerControllerDataSource, TYPagerControllerDele
     }
     
     
+}
+
+extension HomeViewController: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
 }

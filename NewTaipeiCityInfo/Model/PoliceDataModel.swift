@@ -20,3 +20,5 @@ struct PoliceDataModel : Codable {
     var twd97N: String?
     var update_date: String?
 }
+
+

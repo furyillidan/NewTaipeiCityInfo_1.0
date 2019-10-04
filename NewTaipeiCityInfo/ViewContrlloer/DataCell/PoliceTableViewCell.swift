@@ -10,16 +10,19 @@ import UIKit
 
 class PoliceTableViewCell: UITableViewCell {
     
-    var districtLabel = UILabel()
-    var nameLabel = UILabel()
-    var addressLabel = UILabel()
-    var telLabel = UILabel()
-    var websiteLabel = UILabel()
-    var imgView = UIImageView()
+    @IBOutlet weak var nameBtn: UILabel!
+    @IBOutlet weak var addressBtn: UIButton!
+    @IBOutlet weak var telBtn: UIButton!
+    @IBOutlet weak var websiteBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        layout()
+        
+        self.addressBtn.titleLabel?.numberOfLines = 0
+        self.nameBtn.numberOfLines = 0
+        self.backgroundColor = cellBackgroundColor
+        self.selectionStyle = .none
+        //layout()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,29 +31,25 @@ class PoliceTableViewCell: UITableViewCell {
         
     }
     
-    func layout () {
-        
-        imgView.frame = CGRect(x: 5, y: 20, width: self.contentView.frame.width / 6.5, height: self.contentView.frame.height - 25)
-        imgView.image = UIImage(named: "police_station")
-        
-        districtLabel.frame = CGRect(x: contentView.frame.width / 6.5 + 20, y: 3, width: self.contentView.frame.width / 2, height: self.contentView.frame.height / 5)
-        districtLabel.text = "error"
-        nameLabel.frame = CGRect(x: contentView.frame.width / 6.5 + 20, y: self.districtLabel.frame.height + 6, width: self.contentView.frame.width / 5, height: self.contentView.frame.height / 5)
-        nameLabel.text = "teeefgrtt"
-        addressLabel.frame = CGRect(x: contentView.frame.width / 6.5 + 20, y: self.nameLabel.frame.height + self.districtLabel.frame.height + 12, width: self.contentView.frame.width / 5, height: self.contentView.frame.height / 5)
-        addressLabel.text = "werdfgggd"
-        telLabel.frame = CGRect(x: contentView.frame.width / 6.5 + 20, y: self.addressLabel.frame.height + self.districtLabel.frame.height + self.nameLabel.frame.height + 15, width: self.contentView.frame.width / 5, height: self.contentView.frame.height / 5)
-        telLabel.text = "0923112300"
-        websiteLabel.frame = CGRect(x: contentView.frame.width / 6.5 + 20, y: self.telLabel.frame.height + self.districtLabel.frame.height + self.nameLabel.frame.height + self.addressLabel.frame.height + self.telLabel.frame.height + 5, width: self.contentView.frame.width / 5, height: self.contentView.frame.height / 5)
-        websiteLabel.text = "oipwehfld"
-    
-        self.contentView.addSubview(imgView)
-        self.contentView.addSubview(districtLabel)
-        self.contentView.addSubview(nameLabel)
-        self.contentView.addSubview(addressLabel)
-        self.contentView.addSubview(telLabel)
-        self.contentView.addSubview(websiteLabel)
-        
+    @IBAction func addressAction(_ sender: Any) {
+        UserDefaults.standard.set(self.addressBtn.titleLabel?.text, forKey: "address")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "goToMap"), object: nil)
     }
+    
+    @IBAction func telAction(_ sender: Any) {
+        //let url = "tel:\((self.telBtn.titleLabel?.text ?? "").fromSubString(from: 7))"
+        UIApplication.shared.open(URL(string: "tel:\((self.telBtn.titleLabel?.text ?? "").fromSubString(from: 7))")!)
+    }
+    
+    @IBAction func websiteAction(_ sender: Any) {
+        let urlS = (self.websiteBtn.titleLabel?.text)!
+        UIApplication.shared.openURL(URL(string: urlS)!)
+//        UIApplication.shared.openURL(URL(string: urlS)!
+//        if let urlString = self.websiteBtn.titleLabel?.text {
+//            guard let url = URL(string: urlString) else { return }
+//            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//        }
+    }
+    
 
 }

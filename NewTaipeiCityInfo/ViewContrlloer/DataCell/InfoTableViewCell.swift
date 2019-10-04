@@ -18,6 +18,7 @@ class InfoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.backgroundColor = cellBackgroundColor
         layout()
         
     }

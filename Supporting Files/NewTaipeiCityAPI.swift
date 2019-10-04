@@ -13,6 +13,7 @@ let GarbageTruckAPI = "http://data.ntpc.gov.tw/api/v1/rest/datastore/382000000A-
 //警局api
 let policeDataAPI = "https://data.ntpc.gov.tw/od/data/api/6DCFF24A-838C-40FB-A9DF-F1160AFAFE84?$format=json"
 
+
 //配合簽定供氣契約瓦斯行清冊
 let gasCompany = "https://data.ntpc.gov.tw/od/data/api/723B6698-29C5-42CA-A7EC-945D39122BB9?$format=json"
 //瓦斯價格
@@ -23,3 +24,14 @@ let animalHospital = "https://data.ntpc.gov.tw/od/data/api/DE4CFD62-E977-4C4F-82
 
 //新北市觀光旅遊景點
 let sightseeingSpots = "https://data.ntpc.gov.tw/od/data/api/8167D8E3-1C57-4C29-8C49-7A7CEEA2832F?$format=json"
+
+
+let NTCHospitalAPI =
+"https://data.ntpc.gov.tw/od/data/api/0638F8D4-14BF-40FB-B851-DE0687F8F3ED?$format=json"
+
+
+//新北市拖吊保管場資訊
+let TowingStorageYardAPI = "https://data.ntpc.gov.tw/od/data/api/1994216A-EA78-4CA5-B876-0FF45BF9D78F?$format=json"
+
+//新北市觀光旅遊景點(中文-106年更新)
+let SightseeingSpotsAPI = "https://data.ntpc.gov.tw/od/data/api/8167D8E3-1C57-4C29-8C49-7A7CEEA2832F?$format=json"

@@ -10,19 +10,26 @@ import Alamofire
 public typealias DataResponse = Alamofire.DataResponse
 
 
+protocol NTServiceDelegate {
+    func responseData() -> Result<Any>
+}
+
+
 class NTService: NSObject {
     
-     static let sharedInstance = NTService()
+    static let sharedInstance = NTService()
+    
     static let AFManager: Alamofire.SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
-        configuration.timeoutIntervalForRequest = 10
+        configuration.timeoutIntervalForRequest = 5
         return Alamofire.SessionManager(configuration: configuration)
     }()
     
     func nt_requestWithParameters(url: String, _ parameter:[String: Any],_ callback: @escaping (DataResponse<Any>) -> Void) {
         
            getRequsetWithURLString(url, parameter, callback)
+        
     }
  
     private func getRequsetWithURLString(_ url:String,_ parameter:[String: Any]?,_ callback:@escaping (DataResponse<Any>) -> Void ) {

@@ -7,9 +7,9 @@ target 'NewTaipeiCityInfo' do
 
 pod 'Alamofire'
 pod 'NotificationBannerSwift'
-#pod 'Google-Mobile-Ads-SDK'
+pod 'Google-Mobile-Ads-SDK'
 #pod 'BmoViewPager'
-pod 'Kingfisher'
+#pod 'Kingfisher'
   # Pods for NewTaipeiCityInfo
 
 

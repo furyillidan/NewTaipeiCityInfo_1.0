@@ -7,19 +7,28 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class priceDetailViewController: UIViewController {
     
+    @IBOutlet weak var GADBanner: GADBannerView!
     @IBOutlet weak var naviTitleView: UILabel!
     @IBOutlet weak var naviView: UIView!
     @IBOutlet weak var ADView: UIView!
     var gasCompanyList = [GasCompany]()
+    
 
     @IBOutlet weak var priceDetailTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        GADBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        GADBanner.rootViewController = self
+        GADBanner.load(GADRequest())
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(goToMap), name: NSNotification.Name(rawValue: "goTo"), object: nil)
+        
         self.naviTitleView.text = "配合簽定供氣契約瓦斯行清冊"
         self.naviView.backgroundColor = UIColor(red: 1, green: 0.2, blue: 0.3, alpha: 0.35)
         
@@ -37,8 +46,16 @@ class priceDetailViewController: UIViewController {
     }
     
     
+    @objc func goToMap () {
+
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "PriceMapViewController") as! PriceMapViewController
+        self.present(vc, animated: true, completion: nil)
+        
+    }
+    
     func load_Data (url:String) {
-       
+        
         let parameters: [String : Any] = [:]
         
         NTService.sharedInstance.nt_requestWithParameters(url: url, parameters) { (response) in
@@ -72,8 +89,6 @@ class priceDetailViewController: UIViewController {
 
 
 
-
-
 extension priceDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -97,8 +112,6 @@ extension priceDetailViewController: UITableViewDataSource {
       
         cell.mobilePhoneBtn.setAttributedTitle(mobileAttStr, for: .normal)
 
-        UserDefaults.standard.set(self.gasCompanyList[indexPath.row].company_telephone ?? "", forKey: "tel")
-        UserDefaults.standard.set(self.gasCompanyList[indexPath.row].mobile_phone ?? "", forKey: "mobile")
         return cell
     }
     
@@ -113,6 +126,5 @@ extension priceDetailViewController: UITableViewDataSource {
 extension priceDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
 }
