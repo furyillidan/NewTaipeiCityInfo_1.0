@@ -29,8 +29,9 @@ class priceDetailViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(goToMap), name: NSNotification.Name(rawValue: "goTo"), object: nil)
         
-        self.naviTitleView.text = "配合簽定供氣契約瓦斯行清冊"
-        self.naviView.backgroundColor = UIColor(red: 1, green: 0.2, blue: 0.3, alpha: 0.35)
+        
+        self.naviTitleView.text = "\(UserDefaults.standard.value(forKey: "city") ?? "")簽定契約瓦斯行"
+        self.naviView.backgroundColor = UIColor(red: 1, green: 0.2, blue: 0.3, alpha: 0.1)
         
         self.priceDetailTableView.delegate = self
         self.priceDetailTableView.dataSource = self

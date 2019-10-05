@@ -57,16 +57,8 @@ class InfoViewController: UIViewController {
         switch witchOne {
         case 0:
             self.infoTableView.rowHeight = 100
-        case 1:
-            self.infoTableView.rowHeight = 160
-        case 2:
-            self.infoTableView.rowHeight = 140
-        case 3:
-            self.infoTableView.rowHeight = 160
-        case 4:
-            self.infoTableView.rowHeight = 140
         default:
-            break
+            self.infoTableView.rowHeight = 150
         }
         
         load_Data()
@@ -204,7 +196,7 @@ extension InfoViewController: UITableViewDataSource {
             if policeItem[indexPath.row].website == "" {
                 cell.websiteBtn.setTitle("暫不提供" , for: .normal)
             }else{
-                cell.websiteBtn.setTitle(policeItem[indexPath.row].website , for: .normal)
+                cell.websiteBtn.setTitle(policeItem[indexPath.row].website, for: .normal)
             }
             return cell
           }
@@ -228,8 +220,11 @@ extension InfoViewController: UITableViewDataSource {
             }
         case 4:
             if SightseeingSpotsItem.count > 0 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "SightseeingSpotsTableViewCell", for: indexPath) as! SightseeingSpotsTableViewCell
-                
+                let cell = tableView.dequeueReusableCell(withIdentifier: "NTCHospitalTableViewCell", for: indexPath) as! NTCHospitalTableViewCell
+                cell.nameLabel.text = SightseeingSpotsItem[indexPath.row].Name
+                cell.addressBtn.setTitle(SightseeingSpotsItem[indexPath.row].Add, for: .normal)
+                cell.telBtn.setTitle("聯絡電話 : \(SightseeingSpotsItem[indexPath.row].Tel ?? "")", for: .normal)
+                cell.hospitalCellImageView.image = UIImage(named: "travel")
                 return cell
             }
         default :

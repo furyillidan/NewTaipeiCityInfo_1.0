@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		2BD4369B8EB6CC3B4370105D /* Pods_NewTaipeiCityInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893C444153F2DA96351E1765 /* Pods_NewTaipeiCityInfo.framework */; };
 		B507635B232F1F0400B4A471 /* priceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B507635A232F1F0400B4A471 /* priceDetailViewController.swift */; };
-		B507635D2334BE8A00B4A471 /* GasCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = B507635C2334BE8A00B4A471 /* GasCompany.swift */; };
 		B50A1958233DFAF500230CAB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50A1957233DFAF500230CAB /* MapKit.framework */; };
 		B50A6ACE2338655A00B7293E /* priceDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50A6ACD2338655A00B7293E /* priceDetailTableViewCell.swift */; };
-		B510AE7E2326390E00B45D00 /* PoliceDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510AE7D2326390E00B45D00 /* PoliceDataModel.swift */; };
 		B510AE82232647AB00B45D00 /* PoliceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510AE81232647AB00B45D00 /* PoliceTableViewCell.swift */; };
 		B52A1D1F229064F100FA8EE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D1E229064F100FA8EE8 /* AppDelegate.swift */; };
 		B52A1D21229064F100FA8EE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D20229064F100FA8EE8 /* HomeViewController.swift */; };
@@ -28,16 +26,12 @@
 		B52A1D4A22906A6B00FA8EE8 /* TYTabPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D3E22906A6A00FA8EE8 /* TYTabPagerController.m */; };
 		B52A1D4B22906A6B00FA8EE8 /* TYTabPagerBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D3F22906A6A00FA8EE8 /* TYTabPagerBarCell.m */; };
 		B52A1D4C22906A6B00FA8EE8 /* TYPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A1D4122906A6A00FA8EE8 /* TYPagerView.m */; };
-		B55230132345DEA600312DEC /* TowingStorageYardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55230122345DEA600312DEC /* TowingStorageYardModel.swift */; };
 		B55230152345EE6600312DEC /* SightseeingSpotsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55230142345EE6600312DEC /* SightseeingSpotsTableViewCell.swift */; };
-		B55230172345F03A00312DEC /* SightseeingSpotsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55230162345F03A00312DEC /* SightseeingSpotsModel.swift */; };
 		B554EB2F234712C700BC70F9 /* popoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B554EB2E234712C700BC70F9 /* popoverViewController.swift */; };
+		B554EB31234747C900BC70F9 /* ALLdataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B554EB30234747C900BC70F9 /* ALLdataModel.swift */; };
 		B5BFD0B6229123E3006B44A8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFD0B5229123E3006B44A8 /* InfoViewController.swift */; };
 		B5BFD0B822918FDE006B44A8 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFD0B722918FDE006B44A8 /* InfoTableViewCell.swift */; };
 		B5BFD0BA2291B020006B44A8 /* NewTaipeiCityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFD0B92291B020006B44A8 /* NewTaipeiCityAPI.swift */; };
-		B5BFD0BC2291B5F1006B44A8 /* GarbageTruckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFD0BB2291B5F1006B44A8 /* GarbageTruckModel.swift */; };
-		B5BFD0BE229243A7006B44A8 /* GasPriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFD0BD229243A7006B44A8 /* GasPriceModel.swift */; };
-		B5E5C36D2345864700B6C274 /* NTCHospitalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5C36C2345864700B6C274 /* NTCHospitalModel.swift */; };
 		B5E5C36F2345902A00B6C274 /* NTCHospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5C36E2345902A00B6C274 /* NTCHospitalTableViewCell.swift */; };
 		B5F0B3DF229AD8C1002CD895 /* NTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3DE229AD8C1002CD895 /* NTService.swift */; };
 		B5F0B3E1229AF925002CD895 /* NT_AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0B3E0229AF925002CD895 /* NT_AlertManager.swift */; };
@@ -51,10 +45,8 @@
 		893C444153F2DA96351E1765 /* Pods_NewTaipeiCityInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewTaipeiCityInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA876C51529C0150759AD9D8 /* Pods-NewTaipeiCityInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTaipeiCityInfo.debug.xcconfig"; path = "Target Support Files/Pods-NewTaipeiCityInfo/Pods-NewTaipeiCityInfo.debug.xcconfig"; sourceTree = "<group>"; };
 		B507635A232F1F0400B4A471 /* priceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = priceDetailViewController.swift; sourceTree = "<group>"; };
-		B507635C2334BE8A00B4A471 /* GasCompany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasCompany.swift; sourceTree = "<group>"; };
 		B50A1957233DFAF500230CAB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B50A6ACD2338655A00B7293E /* priceDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = priceDetailTableViewCell.swift; sourceTree = "<group>"; };
-		B510AE7D2326390E00B45D00 /* PoliceDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceDataModel.swift; sourceTree = "<group>"; };
 		B510AE81232647AB00B45D00 /* PoliceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceTableViewCell.swift; sourceTree = "<group>"; };
 		B52A1D1B229064F000FA8EE8 /* NewTaipeiCityInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewTaipeiCityInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52A1D1E229064F100FA8EE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,16 +73,12 @@
 		B52A1D4322906A6A00FA8EE8 /* TYPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPagerController.h; sourceTree = "<group>"; };
 		B52A1D4422906A6A00FA8EE8 /* TYPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPagerView.h; sourceTree = "<group>"; };
 		B52A1D552290721500FA8EE8 /* NewTaipeiCityInfo-Brdging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewTaipeiCityInfo-Brdging-Header.h"; sourceTree = "<group>"; };
-		B55230122345DEA600312DEC /* TowingStorageYardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowingStorageYardModel.swift; sourceTree = "<group>"; };
 		B55230142345EE6600312DEC /* SightseeingSpotsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightseeingSpotsTableViewCell.swift; sourceTree = "<group>"; };
-		B55230162345F03A00312DEC /* SightseeingSpotsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightseeingSpotsModel.swift; sourceTree = "<group>"; };
 		B554EB2E234712C700BC70F9 /* popoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popoverViewController.swift; sourceTree = "<group>"; };
+		B554EB30234747C900BC70F9 /* ALLdataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALLdataModel.swift; sourceTree = "<group>"; };
 		B5BFD0B5229123E3006B44A8 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		B5BFD0B722918FDE006B44A8 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		B5BFD0B92291B020006B44A8 /* NewTaipeiCityAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaipeiCityAPI.swift; sourceTree = "<group>"; };
-		B5BFD0BB2291B5F1006B44A8 /* GarbageTruckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageTruckModel.swift; sourceTree = "<group>"; };
-		B5BFD0BD229243A7006B44A8 /* GasPriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasPriceModel.swift; sourceTree = "<group>"; };
-		B5E5C36C2345864700B6C274 /* NTCHospitalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTCHospitalModel.swift; sourceTree = "<group>"; };
 		B5E5C36E2345902A00B6C274 /* NTCHospitalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTCHospitalTableViewCell.swift; sourceTree = "<group>"; };
 		B5F0B3DE229AD8C1002CD895 /* NTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTService.swift; sourceTree = "<group>"; };
 		B5F0B3E0229AF925002CD895 /* NT_AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NT_AlertManager.swift; sourceTree = "<group>"; };
@@ -199,13 +187,7 @@
 		B5BFD0BF229243C3006B44A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B5BFD0BB2291B5F1006B44A8 /* GarbageTruckModel.swift */,
-				B5BFD0BD229243A7006B44A8 /* GasPriceModel.swift */,
-				B507635C2334BE8A00B4A471 /* GasCompany.swift */,
-				B510AE7D2326390E00B45D00 /* PoliceDataModel.swift */,
-				B5E5C36C2345864700B6C274 /* NTCHospitalModel.swift */,
-				B55230122345DEA600312DEC /* TowingStorageYardModel.swift */,
-				B55230162345F03A00312DEC /* SightseeingSpotsModel.swift */,
+				B554EB30234747C900BC70F9 /* ALLdataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -405,7 +387,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B554EB2F234712C700BC70F9 /* popoverViewController.swift in Sources */,
-				B55230132345DEA600312DEC /* TowingStorageYardModel.swift in Sources */,
 				B50A6ACE2338655A00B7293E /* priceDetailTableViewCell.swift in Sources */,
 				B5BFD0B822918FDE006B44A8 /* InfoTableViewCell.swift in Sources */,
 				B52A1D4A22906A6B00FA8EE8 /* TYTabPagerController.m in Sources */,
@@ -416,23 +397,18 @@
 				B52A1D21229064F100FA8EE8 /* HomeViewController.swift in Sources */,
 				B52A1D4C22906A6B00FA8EE8 /* TYPagerView.m in Sources */,
 				B5F61909233CAC4500208317 /* PriceMapViewController.swift in Sources */,
-				B510AE7E2326390E00B45D00 /* PoliceDataModel.swift in Sources */,
 				B5F0B3E3229AFACE002CD895 /* NT_CommonNameHeader.swift in Sources */,
-				B507635D2334BE8A00B4A471 /* GasCompany.swift in Sources */,
 				B52A1D4B22906A6B00FA8EE8 /* TYTabPagerBarCell.m in Sources */,
 				B507635B232F1F0400B4A471 /* priceDetailViewController.swift in Sources */,
-				B5BFD0BE229243A7006B44A8 /* GasPriceModel.swift in Sources */,
 				B5F0B3DF229AD8C1002CD895 /* NTService.swift in Sources */,
 				B52A1D4522906A6B00FA8EE8 /* TYPagerController.m in Sources */,
-				B5BFD0BC2291B5F1006B44A8 /* GarbageTruckModel.swift in Sources */,
 				B52A1D4622906A6B00FA8EE8 /* TYPagerViewLayout.m in Sources */,
 				B510AE82232647AB00B45D00 /* PoliceTableViewCell.swift in Sources */,
 				B52A1D4722906A6B00FA8EE8 /* TYTabPagerBar.m in Sources */,
-				B55230172345F03A00312DEC /* SightseeingSpotsModel.swift in Sources */,
 				B5BFD0BA2291B020006B44A8 /* NewTaipeiCityAPI.swift in Sources */,
 				B52A1D1F229064F100FA8EE8 /* AppDelegate.swift in Sources */,
 				B5BFD0B6229123E3006B44A8 /* InfoViewController.swift in Sources */,
-				B5E5C36D2345864700B6C274 /* NTCHospitalModel.swift in Sources */,
+				B554EB31234747C900BC70F9 /* ALLdataModel.swift in Sources */,
 				B5E5C36F2345902A00B6C274 /* NTCHospitalTableViewCell.swift in Sources */,
 				B5F0B3E1229AF925002CD895 /* NT_AlertManager.swift in Sources */,
 				B52A1D4822906A6B00FA8EE8 /* TYTabPagerBarLayout.m in Sources */,

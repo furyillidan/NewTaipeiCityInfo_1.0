@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     lazy var datas = [String]()
     lazy var titleLabel = UILabel()
 
-    var data = ["瓦斯價格","警局資訊","醫院資訊","拖吊保管場資訊","休閒旅遊"]
+    var data = ["瓦斯價格","警局資訊","醫院資訊","拖吊保管場資訊","觀光旅遊景點"]
                 //,"生育保健","老年安養","生活安全及品質","求學及進修","生命禮儀"]
     override func viewDidLoad() {
         super.viewDidLoad()

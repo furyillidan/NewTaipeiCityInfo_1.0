@@ -32,9 +32,13 @@ class NTCHospitalTableViewCell: UITableViewCell {
     }
     
     @IBAction func telBtn(_ sender: Any) {
-         UIApplication.shared.open(URL(string: "tel:\((self.telBtn.titleLabel?.text ?? "").fromSubString(from: 7))")!)
+        if (self.telBtn.titleLabel?.text?.contains("聯絡"))!{
+            guard let urlString = self.telBtn.titleLabel?.text else { return }
+            UIApplication.shared.open(URL(string: "tel:\(urlString.fromSubString(from: 7))")!)
+        } else {
+            UIApplication.shared.open(URL(string: "tel:\((self.telBtn.titleLabel?.text ?? "").fromSubString(from: 7))")!)
+        }
     }
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

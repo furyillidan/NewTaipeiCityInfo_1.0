@@ -15,16 +15,6 @@ class NTAlertManager: NSObject {
     
     static let sharedInstance = NTAlertManager()
     
-    func showBadNetworkAlert() {
-        
-        self.alertController = UIAlertController(title: tAlertBadNetwork, message: msgAlertBadNetwork, preferredStyle: .alert)
-        if !self.alertController!.isViewLoaded && (self.alertController?.view.window != nil) {
-            
-            alertController?.addAction(UIAlertAction(title: btnOK, style: .default, handler: nil))
-            
-            
-        }
-    }
     
     func callAlertView (alertTitle: String?, alertMessage: String?, actionTitle: String?, view: UIViewController?) {
         
