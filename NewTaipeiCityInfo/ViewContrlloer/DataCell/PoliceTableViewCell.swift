@@ -37,18 +37,12 @@ class PoliceTableViewCell: UITableViewCell {
     }
     
     @IBAction func telAction(_ sender: Any) {
-        //let url = "tel:\((self.telBtn.titleLabel?.text ?? "").fromSubString(from: 7))"
         UIApplication.shared.open(URL(string: "tel:\((self.telBtn.titleLabel?.text ?? "").fromSubString(from: 7))")!)
     }
     
     @IBAction func websiteAction(_ sender: Any) {
-        let urlS = (self.websiteBtn.titleLabel?.text)!
-        UIApplication.shared.openURL(URL(string: urlS)!)
-//        UIApplication.shared.openURL(URL(string: urlS)!
-//        if let urlString = self.websiteBtn.titleLabel?.text {
-//            guard let url = URL(string: urlString) else { return }
-//            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-//        }
+        let urlS = "https://" + "\(self.websiteBtn.titleLabel?.text ?? "")!"
+        UIApplication.shared.open(URL(string: urlS)!)
     }
     
 

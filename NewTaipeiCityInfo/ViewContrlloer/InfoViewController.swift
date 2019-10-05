@@ -42,7 +42,7 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GADbanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        GADbanner.adUnitID = Formal_ADUnit
         GADbanner.rootViewController = self
         GADbanner.load(GADRequest())
         

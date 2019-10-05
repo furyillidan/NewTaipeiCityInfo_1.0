@@ -23,7 +23,7 @@ class priceDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GADBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        GADBanner.adUnitID = Formal_ADUnit
         GADBanner.rootViewController = self
         GADBanner.load(GADRequest())
         

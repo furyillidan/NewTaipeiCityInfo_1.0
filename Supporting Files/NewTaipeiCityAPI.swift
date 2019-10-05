@@ -25,7 +25,7 @@ let animalHospital = "https://data.ntpc.gov.tw/od/data/api/DE4CFD62-E977-4C4F-82
 //新北市觀光旅遊景點
 let sightseeingSpots = "https://data.ntpc.gov.tw/od/data/api/8167D8E3-1C57-4C29-8C49-7A7CEEA2832F?$format=json"
 
-
+//醫院
 let NTCHospitalAPI =
 "https://data.ntpc.gov.tw/od/data/api/0638F8D4-14BF-40FB-B851-DE0687F8F3ED?$format=json"
 
