@@ -70,7 +70,8 @@ class InfoViewController: UIViewController {
         
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
               let vc = storyBoard.instantiateViewController(withIdentifier: "PriceMapViewController") as! PriceMapViewController
-        vc.addresData = UserDefaults.standard.value(forKey: "address") as? String ?? ""
+        let addressString = UserDefaults.standard.value(forKey: "address") as? String ?? ""
+        vc.addresData = addressString
         self.present(vc, animated: true, completion: nil)
         
     }
@@ -190,8 +191,8 @@ extension InfoViewController: UITableViewDataSource {
         case 1:
             if policeItem.count > 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PoliceTableViewCell", for: indexPath) as! PoliceTableViewCell
-            cell.nameBtn.text = policeItem[indexPath.row].name
-            cell.addressBtn.setTitle("地址 : \(policeItem[indexPath.row].address ?? "")", for: .normal)
+            cell.nameLabel.text = policeItem[indexPath.row].name
+            cell.addressBtn.setTitle(policeItem[indexPath.row].address ?? "", for: .normal)
             cell.telBtn.setTitle("警局電話 : \(policeItem[indexPath.row].tel ?? "")", for: .normal)
             if policeItem[indexPath.row].website == "" {
                 cell.websiteBtn.setTitle("暫不提供" , for: .normal)
@@ -255,6 +256,7 @@ extension InfoViewController:  UITableViewDelegate {
         if self.gasPriceItem.count > 0 {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "priceDetailViewController") as? priceDetailViewController else { return }
         UserDefaults.standard.set(self.gasPriceItem.first?.records?[indexPath.row].district ?? "", forKey: "city")
+            vc.areaName = self.gasPriceItem.first?.records?[indexPath.row].district ?? ""
         self.present(vc, animated: true, completion: nil)
         } else {
             return

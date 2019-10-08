@@ -16,7 +16,7 @@ class priceDetailViewController: UIViewController {
     @IBOutlet weak var naviView: UIView!
     @IBOutlet weak var ADView: UIView!
     var gasCompanyList = [GasCompany]()
-    
+    var areaName = ""
 
     @IBOutlet weak var priceDetailTableView: UITableView!
     
@@ -29,8 +29,8 @@ class priceDetailViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(goToMap), name: NSNotification.Name(rawValue: "goTo"), object: nil)
         
+        //areaName = UserDefaults.standard.value(forKey: "city") as! String
         
-        self.naviTitleView.text = "\(UserDefaults.standard.value(forKey: "city") ?? "")簽定契約瓦斯行"
         self.naviView.backgroundColor = UIColor(red: 1, green: 0.2, blue: 0.3, alpha: 0.1)
         
         self.priceDetailTableView.delegate = self
@@ -42,6 +42,21 @@ class priceDetailViewController: UIViewController {
         
     }
     
+    override func viewDidLayoutSubviews() {
+        
+        DispatchQueue.main.async {
+                   self.areaName = UserDefaults.standard.value(forKey: "city") as! String
+                   self.naviTitleView.text = "\(self.areaName)簽定契約瓦斯行"
+               }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        
+    }
+    
+    
     @IBAction func priceDetailBackBtn(_ sender: Any) {
       self.dismiss(animated: true, completion: nil)
     }
@@ -51,6 +66,7 @@ class priceDetailViewController: UIViewController {
 
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = storyBoard.instantiateViewController(withIdentifier: "PriceMapViewController") as! PriceMapViewController
+        vc.addresData = UserDefaults.standard.value(forKey: "address") as? String ?? ""
         self.present(vc, animated: true, completion: nil)
         
     }
@@ -127,5 +143,6 @@ extension priceDetailViewController: UITableViewDataSource {
 extension priceDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }

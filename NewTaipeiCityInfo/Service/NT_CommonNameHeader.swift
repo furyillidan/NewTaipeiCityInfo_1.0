@@ -18,4 +18,4 @@ let screenSize = UIScreen.main.bounds.size
 
 //ad_unit
 let Test_ADUnit = "ca-app-pub-3940256099942544/2934735716"
-let Formal_ADUnit = "ca-app-pub-7115815341253727/5930322691"
+let Formal_ADUnit = "ca-app-pub-3940256099942544/2934735716"//"ca-app-pub-7115815341253727/5930322691"

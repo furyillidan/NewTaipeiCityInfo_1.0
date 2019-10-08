@@ -15,6 +15,7 @@ class PriceMapViewController: UIViewController {
     var locationManager : CLLocationManager!
     var Annotation : MKAnnotation!
     var addresData = ""
+    var addresTitle = ""
     
     @IBOutlet weak var myMapView: MKMapView!
     
@@ -30,7 +31,7 @@ class PriceMapViewController: UIViewController {
         myMapView.mapType = .standard
         myMapView.showsUserLocation = true
         myMapView.isZoomEnabled = true
-        
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,6 +54,8 @@ class PriceMapViewController: UIViewController {
     }
     
  
+    
+    
     @IBAction func priceMapBackBtn(_ sender: Any) {
             self.dismiss(animated: true, completion: nil)
     }
@@ -76,23 +79,17 @@ class PriceMapViewController: UIViewController {
     }
 
     @IBAction func whereAmIBtn(_ sender: Any) {
-        locationManager.startUpdatingLocation()
+        let center = self.locationManager.location?.coordinate
+        let regin = MKCoordinateRegion(center: center!, span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03))
+         
+         self.myMapView.setRegion(regin, animated: true)
     }
     
     
-//    func addAnnotations(latitude: Double?, longitude: Double?) {
-//        let pointAnnotation = MKPointAnnotation()
-//        pointAnnotation.coordinate = CLLocationCoordinate2DMake(latitude ?? 0.0, longitude ?? 0.0)
-//        pointAnnotation.title = "You Are here"
-//        pointAnnotation.subtitle = "Try Not To Get Lost"
-//        self.myMapView.addAnnotation(pointAnnotation)
-//
-//    }
-    
-    
-    
-    func getGasCompanyLatitudeAndLongitude (address: String?) {
+    func getGasCompanyLatitudeAndLongitude (address: String?, callback: @escaping (String) -> Void) {
+
         
+        var addressCoordinate = ""
         let geoCoder = CLGeocoder()
                geoCoder.geocodeAddressString(address!) { (placemarks, error) in
                    if error != nil {
@@ -102,10 +99,12 @@ class PriceMapViewController: UIViewController {
                    
                    if placemarks != nil && placemarks!.count > 0 {
                        let placemark = placemarks![0] as CLPlacemark
-                       print(placemark)
-                       
+                       addressCoordinate = placemark.region?.identifier ?? ""
+                       print(addressCoordinate)
+                       callback(addressCoordinate)
                    }
             }
+       
         }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -123,18 +122,34 @@ class PriceMapViewController: UIViewController {
 
 extension PriceMapViewController: CLLocationManagerDelegate {
     
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let currentLocation: CLLocation = locations[0] as CLLocation
         print("\(currentLocation.coordinate.latitude)")
         print("\(currentLocation.coordinate.longitude)")
         
-        let center = CLLocationCoordinate2DMake(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude)
+//        let center = CLLocationCoordinate2DMake(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude)
         
-        let regin = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-//        self.addAnnotations(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
-//
-        myMapView.setRegion(regin, animated: true)
+        getGasCompanyLatitudeAndLongitude(address: addresData) { (dataString) in
+            
+//            let center = CLLocationCoordinate2DMake(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude)
+            let coordinationString = dataString.split(separator: ",")
+            let latitudeString = String(coordinationString.first ?? "").fromSubString(from: 1)
+            let longitudeString = String(coordinationString.last ?? "").toSubString(to: 13)
+            let center = CLLocationCoordinate2DMake(Double(latitudeString)!,Double(longitudeString)!)
+            let regin = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03))
+       
+            self.myMapView.setRegion(regin, animated: true)
+            
+            let objectAnnotation = MKPointAnnotation()
+            objectAnnotation.coordinate = CLLocation(latitude: Double(latitudeString)!, longitude: Double(longitudeString)!).coordinate
+            let nameTitle = UserDefaults.standard.value(forKey: "placeName") as! String
+            objectAnnotation.title = nameTitle
+            //objectAnnotation.subtitle = "石門警局"
+            self.myMapView.addAnnotation(objectAnnotation)
+        }
+
     }
     
 }

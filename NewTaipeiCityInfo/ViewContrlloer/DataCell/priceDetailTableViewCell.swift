@@ -65,6 +65,7 @@ class priceDetailTableViewCell: UITableViewCell {
     
     @objc func selectAddress () {
         UserDefaults.standard.set(self.addressBtn.titleLabel?.text, forKey: "address")
+        UserDefaults.standard.set(self.placeNameLabel.text, forKey: "placeName")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "goTo"), object: nil)
     }
 

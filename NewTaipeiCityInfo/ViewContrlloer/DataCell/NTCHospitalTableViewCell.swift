@@ -28,7 +28,8 @@ class NTCHospitalTableViewCell: UITableViewCell {
     
     @IBAction func addressBtn(_ sender: Any) {
         UserDefaults.standard.set(self.addressBtn.titleLabel?.text, forKey: "address")
-               NotificationCenter.default.post(name: NSNotification.Name(rawValue: "goToMap"), object: nil)
+        UserDefaults.standard.set(self.nameLabel.text, forKey: "placeName")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "goToMap"), object: nil)
     }
     
     @IBAction func telBtn(_ sender: Any) {

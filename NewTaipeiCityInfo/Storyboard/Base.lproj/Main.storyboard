@@ -71,6 +71,20 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3HH-EO-bEM" id="wgS-WK-OgP">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4N-5z-lYT">
+                                                    <rect key="frame" x="354" y="25" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="54F-n5-HR9"/>
+                                                        <constraint firstAttribute="width" constant="40" id="Lkc-lc-o0L"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="one_click"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="s4N-5z-lYT" secondAttribute="trailing" constant="20" id="n6T-cD-pIZ"/>
+                                                <constraint firstItem="s4N-5z-lYT" firstAttribute="centerY" secondItem="wgS-WK-OgP" secondAttribute="centerY" id="xdG-Rm-w9q"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
@@ -162,7 +176,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="addressBtn" destination="6cA-Q6-9a4" id="lQc-H7-AUr"/>
-                                            <outlet property="nameBtn" destination="4eo-sx-jxJ" id="yU8-ZQ-gxf"/>
+                                            <outlet property="nameLabel" destination="4eo-sx-jxJ" id="1Fr-tw-PBM"/>
                                             <outlet property="telBtn" destination="6WN-Zm-UuP" id="CBb-os-tRV"/>
                                             <outlet property="websiteBtn" destination="mTd-hM-ZGO" id="rRg-XZ-EZY"/>
                                         </connections>
@@ -328,7 +342,7 @@
                                             <action selector="priceDetailBackBtn:" destination="Q8S-en-gRv" eventType="touchUpInside" id="9bp-pe-DId"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hf-4U-t7E">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hf-4U-t7E">
                                         <rect key="frame" x="60" y="0.0" width="304" height="60"/>
                                         <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="20"/>
                                         <nil key="textColor"/>
@@ -388,6 +402,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZgG-bz-Svu"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eHQ-Y3-zKA"/>
                     <connections>
                         <outlet property="ADView" destination="X6j-nL-iKy" id="CMc-v1-ciy"/>
                         <outlet property="GADBanner" destination="X6j-nL-iKy" id="wSj-Ub-ncn"/>
@@ -478,8 +493,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="資料來源:新北市政府資料開放平臺 連結: https://data.ntpc.gov.tw/" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yaj-e4-EOk">
-                                <rect key="frame" x="0.0" y="5" width="300" height="65"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="資料來源:新北市政府資料開放平臺 連結: https://data.ntpc.gov.tw/" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yaj-e4-EOk">
+                                <rect key="frame" x="0.0" y="18" width="300" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -488,12 +504,6 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="8yi-XE-GfP" firstAttribute="trailing" secondItem="Yaj-e4-EOk" secondAttribute="trailing" id="8Gd-tL-USY"/>
-                            <constraint firstAttribute="bottom" secondItem="Yaj-e4-EOk" secondAttribute="bottom" id="Vyn-2w-sxA"/>
-                            <constraint firstItem="Yaj-e4-EOk" firstAttribute="leading" secondItem="8yi-XE-GfP" secondAttribute="leading" id="fQO-3n-HT0"/>
-                            <constraint firstItem="Yaj-e4-EOk" firstAttribute="top" secondItem="SsG-rb-mkY" secondAttribute="top" constant="5" id="fvz-c7-5dG"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8yi-XE-GfP"/>
                     </view>
                     <size key="freeformSize" width="300" height="70"/>
@@ -508,6 +518,7 @@
         <image name="compass" width="96" height="96"/>
         <image name="here" width="48" height="48"/>
         <image name="hospital" width="96" height="96"/>
+        <image name="one_click" width="128" height="128"/>
         <image name="police_station" width="100" height="100"/>
     </resources>
 </document>

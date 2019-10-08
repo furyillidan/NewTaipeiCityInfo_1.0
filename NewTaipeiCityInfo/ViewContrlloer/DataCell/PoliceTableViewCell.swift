@@ -10,7 +10,7 @@ import UIKit
 
 class PoliceTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var nameBtn: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressBtn: UIButton!
     @IBOutlet weak var telBtn: UIButton!
     @IBOutlet weak var websiteBtn: UIButton!
@@ -19,7 +19,7 @@ class PoliceTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         self.addressBtn.titleLabel?.numberOfLines = 0
-        self.nameBtn.numberOfLines = 0
+        self.nameLabel.numberOfLines = 0
         self.backgroundColor = cellBackgroundColor
         self.selectionStyle = .none
         //layout()
@@ -33,6 +33,7 @@ class PoliceTableViewCell: UITableViewCell {
     
     @IBAction func addressAction(_ sender: Any) {
         UserDefaults.standard.set(self.addressBtn.titleLabel?.text, forKey: "address")
+        UserDefaults.standard.set(self.nameLabel.text, forKey: "placeName")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "goToMap"), object: nil)
     }
     

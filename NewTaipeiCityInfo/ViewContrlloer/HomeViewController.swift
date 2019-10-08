@@ -6,6 +6,30 @@
 //  Copyright © 2019 Neo Chou. All rights reserved.
 //
 
+enum DataItem {
+    case gasPrice
+    case police
+    case hospital
+    case towingStorageYard
+    case sightseeingSpots
+    
+    var title : String {
+        switch self {
+        case .gasPrice:
+            return "瓦斯價格"
+        case .police:
+            return "警局資訊"
+        case .hospital:
+            return "醫院資訊"
+        case .towingStorageYard:
+            return "拖吊保管場資訊"
+        case .sightseeingSpots:
+            return "觀光旅遊景點"
+        }
+    }
+}
+
+
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -18,12 +42,14 @@ class HomeViewController: UIViewController {
     lazy var datas = [String]()
     lazy var titleLabel = UILabel()
 
-    var data = ["瓦斯價格","警局資訊","醫院資訊","拖吊保管場資訊","觀光旅遊景點"]
-                //,"生育保健","老年安養","生活安全及品質","求學及進修","生命禮儀"]
+    var dataArray = [DataItem]()
+                //"生育保健","老年安養","生活安全及品質","求學及進修","生命禮儀"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.view.backgroundColor = UIColor.white
+        self.setupItems()
         self.addNaviView()
         self.addTabPagerBar()
         self.addPagerController()
@@ -32,6 +58,15 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    func setupItems () {
+        self.dataArray.append(.gasPrice)
+        self.dataArray.append(.police)
+        self.dataArray.append(.hospital)
+        self.dataArray.append(.towingStorageYard)
+        self.dataArray.append(.sightseeingSpots)
+    }
+    
+    
     func addNaviView() {
         self.naviView.frame = CGRect(x: 0, y: 44, width: self.view.frame.width, height: 44)
         self.naviView.backgroundColor = UIColor(red: 0.9, green: 0.8, blue: 0.7, alpha: 1)
@@ -102,20 +137,20 @@ class HomeViewController: UIViewController {
 extension HomeViewController: TYTabPagerBarDataSource, TYTabPagerBarDelegate {
     
     func numberOfItemsInPagerTabBar() -> Int {
-        return self.data.count
+        return self.dataArray.count
     }
     
     func pagerTabBar(_ pagerTabBar: TYTabPagerBar, cellForItemAt index: Int) -> UICollectionViewCell & TYTabPagerBarCellProtocol {
         let cell = pagerTabBar.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(TYTabPagerBarCell.classForCoder()), for: index)
         cell.backgroundColor = UIColor(red: 0.8, green: 0.9, blue: 0.8, alpha: 0.35)
         cell.titleLabel.textColor = UIColor.black
-        cell.titleLabel.text = self.data[index]
+        cell.titleLabel.text = self.dataArray[index].title
         cell.titleLabel.font = UIFont.italicSystemFont(ofSize: 20)
         return cell
     }
     
     func pagerTabBar(_ pagerTabBar: TYTabPagerBar, widthForItemAt index: Int) -> CGFloat {
-        let title = self.data[index]
+        let title = self.dataArray[index].title
         return pagerTabBar.cellWidth(forTitle: title)
     }
     
@@ -129,7 +164,7 @@ extension HomeViewController: TYTabPagerBarDataSource, TYTabPagerBarDelegate {
 extension HomeViewController: TYPagerControllerDataSource, TYPagerControllerDelegate {
     
     func numberOfControllersInPagerController() -> Int {
-        return self.data.count
+        return self.dataArray.count
     }
     
     func pagerController(_ pagerController: TYPagerController, controllerFor index: Int, prefetching: Bool) -> UIViewController {
