@@ -315,7 +315,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C6DE412E-7824-46DD-8AB1-F9351A40AB49"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewTaipeiCityInfo/ViewContrlloer/priceDetailViewController.swift"
@@ -347,7 +347,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5E3DBD9E-6040-46C9-9281-7D370351F034"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewTaipeiCityInfo/ViewContrlloer/DataCell/priceDetailTableViewCell.swift"
@@ -363,7 +363,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "24547E14-037D-4E2C-8B88-1382A7BC4493"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewTaipeiCityInfo/ViewContrlloer/DataCell/NTCHospitalTableViewCell.swift"
@@ -379,7 +379,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "37FD9B33-C96E-4BD5-A403-1CC54F8DC6BE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewTaipeiCityInfo/ViewContrlloer/PriceMapViewController.swift"
@@ -404,6 +404,22 @@
             startingLineNumber = "84"
             endingLineNumber = "84"
             landmarkName = "whereAmIBtn(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BF1466D-260E-446D-9B80-E2703C05B0B8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewTaipeiCityInfo/ViewContrlloer/DataCell/priceDetailTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "selectAddress()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

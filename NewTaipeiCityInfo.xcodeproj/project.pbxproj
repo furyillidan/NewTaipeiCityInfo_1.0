@@ -49,7 +49,7 @@
 		B50A1957233DFAF500230CAB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B50A6ACD2338655A00B7293E /* priceDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = priceDetailTableViewCell.swift; sourceTree = "<group>"; };
 		B510AE81232647AB00B45D00 /* PoliceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceTableViewCell.swift; sourceTree = "<group>"; };
-		B52A1D1B229064F000FA8EE8 /* NewTaipeiCityInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewTaipeiCityInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52A1D1B229064F000FA8EE8 /* 新北市資訊.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新北市資訊.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52A1D1E229064F100FA8EE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B52A1D20229064F100FA8EE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B52A1D23229064F100FA8EE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		B52A1D1C229064F000FA8EE8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B52A1D1B229064F000FA8EE8 /* NewTaipeiCityInfo.app */,
+				B52A1D1B229064F000FA8EE8 /* 新北市資訊.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,7 +278,7 @@
 			);
 			name = NewTaipeiCityInfo;
 			productName = NewTaipeiCityInfo;
-			productReference = B52A1D1B229064F000FA8EE8 /* NewTaipeiCityInfo.app */;
+			productReference = B52A1D1B229064F000FA8EE8 /* 新北市資訊.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -570,8 +570,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.com.inow.NewTaipeiCityInfo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inow.NewTaipeiCityInfo;
+				PRODUCT_NAME = "新北市資訊";
 				SWIFT_OBJC_BRIDGING_HEADER = "NewTaipeiCityInfo/NewTaipeiCityInfo-Brdging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -591,8 +591,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.com.inow.NewTaipeiCityInfo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inow.NewTaipeiCityInfo;
+				PRODUCT_NAME = "新北市資訊";
 				SWIFT_OBJC_BRIDGING_HEADER = "NewTaipeiCityInfo/NewTaipeiCityInfo-Brdging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
